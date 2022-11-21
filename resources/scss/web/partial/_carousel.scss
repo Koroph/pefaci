@@ -1,0 +1,289 @@
+
+.carousel-item {
+    height: 64vh;
+    max-height: 532px;
+    max-width: $max-width;
+
+    .carousel-item-filter {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        //background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .carousel-caption {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        display: flex !important;
+        justify-content: center;
+        align-items: flex-end;
+        padding: 0;
+
+        .kh-carousel-content {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 8px 0;
+
+            h1 {
+                font-size: 1.8rem;
+                text-transform: uppercase;
+                margin-bottom: 8px;
+                //text-shadow: 1px 1px 1px $carousel-content-color;
+            }
+
+            p {
+               // text-shadow: 1px 1px 0.5px $carousel-content-color;
+                font-size: 1rem;
+
+                &:first-letter {
+                    text-transform: uppercase;
+                }
+            }
+
+            a {
+                display: inline-block;
+                background-color: rgba($primary, 0.9);
+                padding: 10px 16px;
+                color: rgba($white, 0.9);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 600;
+                border-radius: 2px;
+
+                &:hover {
+                    transition: all 300ms;
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+    }
+
+    .df-carousel-content {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        user-select: none;
+        background-color: $white;
+
+
+        &#{'-img'} {
+            flex: 1 0 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            .df-carousel-content-img-link {
+                position: absolute;
+                right: 4%;
+                bottom: 4%;
+                background-color: rgba($primary, 0.9);
+                display: inline-block;
+                padding: 14px 18px;
+                color: rgba($white, 0.9);
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 0.8rem;
+                font-weight: 600;
+                border-radius: 2px;
+
+                &:hover {
+                    transition: all 300ms;
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+        }
+
+        &._d {
+            .df-carousel-content-img {
+                flex: 1 0 70% !important;
+            }
+
+            .df-carousel-content-text {
+                flex: 0 0 30% !important;
+                height: 100%;
+                position: relative;
+
+                .df-text {
+                    width: 100%;
+                    height: 100%;
+                    box-sizing: border-box;
+                    padding: 16px 32px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: $white;
+                    border-radius: 4px;
+                    //box-shadow: 2px 2px 6px rgba(0,0,0,0.05);
+                    // border-bottom: 24px solid $primary;
+                    position: absolute;
+                    left: 0;
+                    bottom: 25%;
+
+                    h2 {
+                        &:first-letter {
+                            text-transform: uppercase;
+                            font-weight: bold;
+                        }
+
+                        word-break: break-all;
+
+                    }
+
+                    p {
+                        word-break: break-all;
+                    }
+
+                    > div {
+                        a {
+                            text-decoration: none;
+                            font-weight: 600;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.carousel-control-next, .carousel-control-prev {
+    width: 5% !important;
+}
+
+.carousel-indicators.cl {
+    justify-content: flex-start;
+    left: 0;
+    margin-left: 1%;
+    //margin-right: auto; !important;
+}
+
+.carousel-indicators.offer {
+    justify-content: flex-end;
+    right: 0;
+    margin-right: 1%;
+    //margin-right: auto; !important;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 16px;
+    height: 16px;
+    border-radius: 100%;
+    background-color: $white;
+    opacity: 1;
+}
+
+.carousel-indicators.cl {
+    width: auto;
+
+    button {
+        background-color: $white !important;
+
+        &.active {
+            background-color: $primary !important;
+            transition: background-color 300ms ease-in;
+        }
+    }
+
+}
+
+.carousel-indicators.offer {
+    width: auto;
+
+    button {
+        background-color: $gray-200 !important;
+
+        &.active {
+            background-color: $primary !important;
+            transition: background-color 300ms ease-in;
+        }
+    }
+
+}
+
+@include large-desktop {
+    .carousel-item {
+        height: 482px;
+    }
+}
+
+@include desktop {
+    .carousel-item {
+        height: 432px;
+    }
+}
+
+@include tablet {
+
+    .carousel-item {
+        height: 400px;
+    }
+}
+
+@include phone {
+    .carousel-item {
+        height: 264px;
+
+        &.offer {
+            height: 232px !important;
+            overflow: hidden;
+            border: 6px solid $white;
+            border-radius: 2px;
+
+            img {
+                border-radius: 2px;
+            }
+
+            .df-carousel-content {
+                &#{'-img'} {
+                    flex: 1 0 100%;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
+                    .df-carousel-content-img-link {
+                        position: absolute;
+                        right: 4%;
+                        bottom: 4%;
+                        background-color: rgba($primary, 0.9);
+                        display: inline-block;
+                        padding: 14px 18px;
+                        color: rgba($white, 0.9);
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        font-size: 0.8rem;
+                        font-weight: 600;
+                        border-radius: 2px;
+
+                        &:hover {
+                            transition: all 300ms;
+                            background-color: $primary;
+                            color: $white;
+                        }
+                    }
+                }
+
+                &._d {
+                    .df-carousel-content-text {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    .carousel-indicators {
+        justify-content: flex-start;
+        //margin-right: auto; !important;
+    }
+}

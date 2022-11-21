@@ -1,0 +1,46 @@
+#kh-base-app{
+    position: relative;
+    #kh-base-app{
+        overflow-x: hidden;
+        &#{'-main'}{
+            margin-top:104px;
+            background-color: rgba($body-bg,0.9);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            > #_main{
+               max-width: $max-width;
+                width: 100%;
+            }
+        }
+    }
+}
+
+
+@include phone{
+    #kh-base-app{
+        #kh-base-app{
+            &#{'-main'}{
+                margin-top:64px;
+                main{
+
+                }
+            }
+        }
+    }
+
+}
+
+@include tablet{
+    #kh-base-app{
+        #kh-base-app{
+            &#{'-main'}{
+                margin-top:72px;
+                main{
+
+                }
+            }
+        }
+    }
+}

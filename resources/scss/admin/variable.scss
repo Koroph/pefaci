@@ -1,0 +1,116 @@
+//$body-bg:#edf2f9;
+//$primary:#2c7be5;
+//$primary:#3b82f6;
+$primary:#15a318;
+$accent:#fe4202;
+/*$primary:#0e9647;
+$accent:#f19220;*/
+$primaryDark: #27282c;
+$primaryDarkLight: #323236;
+$side-bar-width: 248px;
+$side-bar-width-small: 84px;
+$top-bar-height: 54px;
+$side-bar-logo-height: 132px;
+$side-bar-header-color:#1a202c;
+$side-bar-body-color:#2d3747;
+// Body
+$body-bg: #edf2f6;
+$black: #000;
+$white: #ffffff;
+
+
+// Typography
+$shadow-color: rgba(0, 0, 0, 0.1);
+
+$web-global-margin:12%;
+$web-nav-bar-z_index:100;
+
+html,:root{
+  scroll-behavior: smooth;
+}
+body {
+  font-family:  "Segoe UI",'Nunito', sans-serif !important;
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+
+}
+@mixin tablet{
+  @media screen and (min-width: 576px) and (max-width: 768px) {
+    @content;
+  }
+}
+@mixin phone{
+  @media screen and (max-width: 540px) {
+    @content;
+  }
+}
+/*
+@include media-breakpoint-down(xl){
+
+}
+@include media-breakpoint-down(lg){
+
+}
+
+@include media-breakpoint-down(md){
+
+}
+@include media-breakpoint-down(sm){
+
+}
+*/
+
+
+._loader {
+    border: 4px solid #f3f3f3; /* Light grey */
+    border-top: 4px solid $primary; /* Blue */
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    animation: spin 1s linear infinite;
+
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#print_state_view {
+    padding: 32px;
+    position: relative;
+    #state_preview {
+        width: 100%;
+        height: 55vh;
+        scrollbar-width:thin;
+    }
+    #print_state_view_start{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255,255,255,0.7);
+        strong{
+            color: rgba(0,0,0,0.7);
+        }
+    }
+    #print_state_view_running{
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: rgba(255,255,255,0.8);
+        justify-content: center;
+        align-items: center;
+        strong{
+            margin-left: 8px;
+        }
+    }
+}

@@ -1,0 +1,165 @@
+
+#kh-base-footer{
+    display: flex;
+    justify-content: center;
+
+    #kh-footer {
+        background-color: $gray-200;
+        overflow: hidden;
+        max-width: $max-width;
+        width: 100%;
+        #kh-footer-content {
+            //border: 4px solid $white;
+            background-color: $dark;
+            border-radius: 2px;
+            padding: 48px 24px;
+            @extend .row;
+            justify-content: center;
+            margin: 0;
+
+            .kh-footer-content-item {
+                padding: 8px 16px;
+                @extend .col-12, .col-md-6, .col-lg-3;
+
+                h4 {
+                    color: $white;
+                    margin-bottom: 16px;
+                    display: inline-block;
+                    position: relative;
+
+                    &:before {
+                        content: "";
+                        display: block;
+                        height: 3px;
+                        width: 90%;
+                        left: 5%;
+                        background-color: $accent;
+                        position: absolute;
+                        bottom: -2px;
+                        border-radius: 2px;
+                    }
+                }
+
+                ul {
+                    padding: 0;
+                    margin: 0;
+                    margin-left: 4px;
+
+                    li {
+                        list-style: none;
+
+                        a {
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            padding: 4px 0;
+                            color: rgba($white, 0.8);
+
+                            &:hover {
+                                color: $white;
+                            }
+
+                            span {
+                                &.icon {
+                                    font-size: 18px;
+                                    margin-right: 8px;
+                                    color: $white;
+                                }
+
+                                &.text {
+                                    &:first-letter {
+                                        text-transform: uppercase;
+                                        font-weight: 700;
+                                        //color: $accent;
+                                    }
+                                }
+
+                                &._bar {
+                                    height: 3px;
+                                    width: 8px;
+                                    margin-right: 4px;
+                                    background-color: $white;
+                                    border-radius: 2px;
+                                }
+                            }
+
+                            svg {
+                                fill: $white;
+                                margin-right: 8px;
+                                width: 22px;
+                                height: 22px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #kh-footer-copy {
+            padding: 2px 0;
+            text-align: center;
+            font-size: x-small;
+            background-color: $black;
+            color: $white;
+            font-weight: 600;
+        }
+    }
+}
+
+
+
+@include tablet {
+    #kh-footer {
+        padding: 24px 24px 0 24px;
+
+        #kh-footer-content {
+            min-height: 25vh;
+            padding: 24px 8px;
+
+            .kh-footer-content-item {
+                padding: 4px 12px;
+            }
+        }
+    }
+}
+
+@include phone {
+    #kh-footer {
+        padding: 8px 8px 0 8px;
+
+        #kh-footer-content {
+            min-height: 25vh;
+            padding: 24px 8px;
+
+            .kh-footer-content-item {
+                padding: 4px 12px;
+            }
+        }
+    }
+}
+@-webkit-keyframes translate-left-to-right {
+    0%, 22%, 78%, 100% {
+        -webkit-transform: translateX(-18.8%);
+        transform: translateX(-18.8%);
+    }
+    28%, 72% {
+        -webkit-transform: translateX(18.8%);
+        transform: translateX(18.8%);
+    }
+}
+
+@keyframes translate-left-to-right {
+    0%, 22%, 78%, 100% {
+        -webkit-transform: translateX(-18.8%);
+        transform: translateX(-18.8%);
+    }
+    28%, 72% {
+        -webkit-transform: translateX(18.8%);
+        transform: translateX(18.8%);
+    }
+}
+
+
+/*
+###
+ */

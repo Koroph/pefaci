@@ -1,0 +1,270 @@
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+    z-index: 997;
+    transition: all 0.5s;
+    background: transparent;
+    padding: 0;
+    top: 0 !important;
+    #kh-header-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: transparent;
+        padding: 0;
+        #_nav{
+            transition: all 0.3s linear;
+            padding: 18px 0;
+        }
+
+    }
+
+    &.header-transparent {
+        #_nav {
+            background: rgba($primary,0.99);
+        }
+    }
+    &.header-scrolled {
+        #_nav{
+            transition: all 0.3s linear;
+            background: rgba($primary, 0.94);
+            padding: 12px 0 !important;
+        }
+        .logo {
+            img {
+                transition: transform 300ms ease-in;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    #header-info {
+        background-color: $accent;
+        height: 36px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6%;
+        z-index: 10;
+        max-width: $max-width;
+        width: 100%;
+
+        .top-header-content-item {
+
+            &#{'-link'} {
+                text-decoration: none;
+                padding: 4px 8px;
+                font-size: 14px;
+                //font-weight: 600;
+                color: $white;
+            }
+
+            &#{'-social'} {
+                text-decoration: none;
+                padding: 4px 6px;
+                display: inline-block;
+                color: $white;
+
+                svg {
+                    fill: $white;
+                    width: 18px;
+                    height: 18px;
+                }
+
+                &:last-child {
+                    svg {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+
+        .search-container {
+            flex: 1;
+            padding: 6px 16px;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+
+            .search-container-content {
+                display: flex;
+                width: 50%;
+                position: relative;
+
+                input {
+                    flex: 1;
+                    background-color: rgba($white, 0.2);
+                    border: 1.8px solid rgba($white, 0.8);
+                    padding: 0 8px;
+                    color: $white !important;
+                    border-bottom-left-radius: 1px;
+                    border-top-left-radius: 1px;
+
+                    &:focus {
+                        border-color: $white;
+                        outline: none;
+                    }
+                }
+
+                label {
+                    border: none;
+                    background-color: rgba($white, 0.9);
+                    padding: 0 6px;
+
+                    svg {
+                        fill: $accent;
+                    }
+
+                    border-top-right-radius: 1px;
+                    border-bottom-right-radius: 1px;
+                }
+
+                #search-container-content-link-container {
+                    position: absolute;
+                    left: 0;
+                    top: 110%;
+                    width: 100%;
+                    z-index: 25;
+                    background-color: $white;
+                    text-align: left;
+                    border-radius: 2px;
+                    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+                    max-height: 360px;
+                    overflow-x: hidden;
+                    overflow-y: auto;
+
+                    .search-container-content-link-container-item {
+                        display: block;
+                        padding: 6px 16px;
+                        text-decoration: none;
+                        color: $dark;
+                        border-bottom: 1px solid $gray-200;
+                        font-size: 0.9rem;
+
+                        &:hover {
+                            color: $secondary;
+                        }
+
+                        &:first-letter {
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+    #_nav{
+        max-width: $max-width;
+        width: 100%;
+        background-color: $primary;
+        padding: 14px 0;
+    }
+
+    .pass-container {
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+       // padding: 0 4%;
+        @extend .container;
+    }
+
+
+    /*@include large-desktop{
+        .pass-container {
+            padding: 0 4%;
+        }
+    }
+
+    @include desktop{
+        .pass-container {
+            padding: 0 4%;
+        }
+    }
+
+    @include tablet{
+        .pass-container {
+            padding: 0 1%;
+        }
+    }
+*/
+    @include phone{
+        .pass-container {
+            padding: 0 8%;
+        }
+    }
+
+    > div:last-child {
+        transition: all 0.5s linear;
+        padding: 14px 0;
+    }
+
+    &.header-transparent {
+        > div:last-child {
+            background: $white;
+        }
+    }
+
+    &.header-scrolled {
+        > div:last-child {
+            transition: all 0.5s linear;
+            background: rgba($white, 0.95);
+            padding: 12px 0;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            img {
+                transition: transform 300ms ease-in;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .logo {
+
+       /* h1 {
+            font-size: 36px;
+            margin: 0;
+            padding: 0;
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }*/
+
+        h1 a, h1 a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        img {
+            padding: 0;
+            margin: 0;
+            max-height: 38px;
+            transform: scale(1.5);
+            transition: transform 300ms ease-out;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .logo h1 {
+            font-size: 28px;
+        }
+    }
+
+    @include phone {
+        #header-info {
+            display: none;
+        }
+    }
+    @include tablet {
+        #header-info {
+            display: none;
+        }
+    }
+}
+
+

@@ -1,0 +1,29 @@
+
+.section-view{
+    border: 1px solid $gray-400;
+    border-radius: 4px;
+    background-color: $white;
+    margin-bottom: 16px;
+    .shadow{
+        box-shadow: 1px 2px 8px $gray-300;
+    }
+    .section-view-header{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 1px solid $gray-400;
+        padding: 16px 24px;
+
+        .section-view-header-left{
+            font-size: 1.1rem;
+        }
+        .section-view-header-right{
+            a{
+                text-decoration: none;
+            }
+        }
+    }
+    .section-view-content{
+        padding: 24px;
+    }
+}

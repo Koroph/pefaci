@@ -1,0 +1,40 @@
+#top-header{
+    height: 42px;
+    background-color: $primary;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 4%;
+    z-index: 10;
+
+    .top-header-content-item{
+
+        &#{'-link'}{
+            text-decoration: none;
+            padding: 4px 8px;
+            font-size: 14px;
+            color: $white;
+        }
+        &#{'-social'}{
+            text-decoration: none;
+            padding: 4px 6px;
+            display: inline-block;
+            color: $white;
+            span{
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+
+@include phone{
+    #top-header{
+        display: none;
+    }
+}
+@include tablet{
+    #top-header{
+        display: none;
+    }
+}

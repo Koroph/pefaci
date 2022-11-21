@@ -1,0 +1,39 @@
+#web-main{
+    padding: 36px 0;
+    #left-menu{
+        background-color: $white;
+        border-radius: 4px;
+        box-shadow: 1px 2px 12px $gray-300;
+        padding: 32px 0;
+        li{
+            list-style: none;
+            margin-top: 2px;
+            a{
+                display: block;
+                padding: 16px 24px;
+                text-transform: uppercase;
+                text-decoration: none;
+                color: $dark;
+                &.active{
+                    font-weight: 600;
+                    background-color: $gray-200;
+                }
+                &:hover{
+                    background-color: $gray-200;
+                    color: $black;
+                }
+                svg{
+                    width: 28px;
+                    height: 28px;
+                }
+                span{
+                    margin-left: 6px;
+                }
+            }
+        }
+    }
+
+    #web-main-content{
+        min-height: 360px;
+    }
+}

@@ -1,0 +1,37 @@
+@import "../global/variable";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../global/breakpoint";
+/*@import "~slick-carousel/slick/slick.css";
+@import "~glightbox/dist/css/glightbox.css";*/
+
+$font-default: 'Roboto','Open Sans', sans-serif;
+$font-primary: 'Roboto','Raleway', sans-serif;
+$font-secondary: 'Roboto','Poppins', sans-serif;
+
+
+// Colors
+$default: #444444;
+/*$primary: #85b0be;
+$secondary: #052c3f;*/
+
+
+@import "./partial/nav-bar";
+@import "./partial/nav_bar_container";
+@import "./partial/main";
+@import "./partial/auth";
+@import "./partial/web-main";
+@import "./partial/section-view";
+@import "./partial/section-header";
+@import "../admin/partial/formComponents";
+@import "../admin/partial/kh-input-custom";
+@import "../admin/partial/kh-button-custom";
+@import "../admin/partial/text";
+@import "./partial/footer";
+@import "./partial/carousel";
+
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 1rem;
+    font-family:"Roboto", 'Nunito', sans-serif;
+}

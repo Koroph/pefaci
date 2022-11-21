@@ -1,0 +1,46 @@
+
+.inphb-section-header{
+    margin: 64px 0 32px 0;
+    text-align: center;
+        h1{
+            text-transform: uppercase;
+            font-weight: 800;
+
+        }
+}
+
+
+@include phone{
+    /*.inphb-section-header{
+        margin-bottom: 16px;
+        .inphb-section-header-title{
+            display: flex;
+            align-items: center;
+            span{
+                height: 4px;
+                width: 54px;
+                background-color: $primary;
+                border-radius: 2px;
+                margin-right: 4px;
+            }
+            strong{
+                font-weight: 600;
+            }
+        }
+        .inphb-section-header-sub-title{
+            margin: 0;
+            font-weight: 700;
+        }
+    }*/
+    .inphb-section-header{
+        margin: 36px 0 32px 0;
+        text-align: center;
+        h1{
+            text-transform: uppercase;
+            font-weight: 800;
+
+        }
+    }
+
+
+}
