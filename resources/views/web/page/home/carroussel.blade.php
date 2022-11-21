@@ -65,7 +65,7 @@
                             onload="this.nextElementSibling ? this.nextElementSibling.remove():''"
                             height="480"
                             decoding="async"
-                            src="{{ asset("storage/fake/stdent.png") }}">
+                            src="{{ asset("storage/fake/img4.jpg") }}">
                         @include('web.layouts.img-mak')
                     </div>
                 </div>

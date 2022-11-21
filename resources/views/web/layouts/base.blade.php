@@ -6,12 +6,11 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'KLA') }} - @yield('title')</title>
+    <title>{{ config('app.name', 'PEFACI') }} - @yield('title')</title>
 
-    <meta name="theme-color" content="##fe4202"/>
+    <meta name="theme-color" content="#fe4202"/>
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('storage/system/logo.jpg') }}">
     @vite(['resources/js/web.js','resources/scss/web/main.scss'])
-
 </head>
 <body id="kh-root-app">
 <div id="kh-base-app">
